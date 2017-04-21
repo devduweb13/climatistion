@@ -1,0 +1,335 @@
+/* Déclaration */
+
+    /* Couleurs */
+    @white: #fff;
+    @blue_ciel: #00aeef;
+    @blue_moyen: #0063b9;
+    @grey_clair: #f0edeb;
+    @grey_clair2: #dfdfdf;
+
+
+    /* Taille image */
+    @height_img: 30px;
+
+
+    /* Largeur */
+    @width_page: 1170px;
+
+
+    /* Font */
+    @font_size: 16px;
+    @font_size_bouton_redirection: 1rem;
+    @font_size_item_majeur: 1.5rem;
+
+
+
+    /* Margin */
+    @margin_bandeau_live: 20px 0;
+    @margin_article_une: 20px;
+
+    
+
+    /* Padding */
+    @padding_texte_bienvenue: 10px;
+    @padding_bandeau_live: 15px 20px;
+
+
+    /* Border */
+
+
+    
+    /* Border table */
+    @border_spacing_table: 5px 15px;
+
+    
+    /* Border Radius */
+    .border-radius-bloc-majeur (@radius_bm: 0 30px 0 0) {
+        -moz-border-radius: @radius_bm;
+        -webkit-border-radius: @radius_bm;
+        border-radius: @radius_bm;
+    }
+
+
+/* Utilisation */
+
+#main-content{ 
+    
+    #image-principale{
+        height: auto;
+        width: 100%;
+    }
+    
+    #services-climatisation{
+        background-color: @grey_clair;
+        padding: 30px 0;
+        min-height: 390px;
+         
+        .services-climatisation-bloc{
+            margin: 40px 0;                       
+        }
+        
+        .redirection-services{
+            margin: 20px 0;           
+
+            a{
+                color: white;
+                padding : 10px 30px;
+                background-color: @blue_ciel;
+
+                &:hover{
+                    background-color: @grey_clair;
+                    color: @blue_ciel;
+                    text-decoration: none;
+                    border: 1px solid @blue_ciel;                    
+                }
+            }
+        }
+        
+        .image-services{
+            
+            img{
+                position: absolute;
+                right: 0; 
+            }
+        }
+    }
+    
+    #estim-climatisation{
+        background-color: white;
+        padding: 30px 0;
+        
+        .visuel-maison img{
+            position: relative;
+            top: -65px;
+            min-height: 300px;
+            margin-bottom: -65px;
+        }
+        
+        .estim-climatisation-bloc{
+            margin: 20px 0;                                   
+        
+              
+        .redirection-estimation{
+            padding: 10px 0 0 30px;    
+
+                a{
+                    color: @white;
+                    padding : 10px 30px;
+                    background-color: @blue_ciel;
+
+                    &:hover{
+                        border: 1px solid @blue_ciel;
+                        background-color: @white;     
+                        color: @blue_ciel;                    
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+        .image-estimation{
+            
+            img{
+                position: absolute;
+                right: 40px; 
+                bottom: -30px;
+                z-index: 12;
+            }
+        }        
+    }
+    
+    #contactez-nous{
+        background-color: @blue_moyen;
+        padding: 30px 0;
+        
+        div h2{
+            text-align: center;
+            padding-bottom: 30px;
+            text-transform: uppercase;
+            color: @white;
+            font-size: 30px;            
+        }
+        
+        .infos-contactez-nous{
+            padding-left: 100px;
+            
+            p{
+                font-size: 20px;
+                padding: 15px 0;
+                color: white;
+                margin: 0;
+            }
+            
+            ul{
+                padding: 15px 0;
+                
+                li{
+                    list-style: none;
+                    float: left;
+                    padding: 0 10px;
+                    
+                    img{
+                        max-height: 30px;
+                    }
+                }
+            }
+        }
+        
+        .formulaire-contactez-nous{
+            position: relative;
+            z-index: 30;
+                        
+            p{
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                color: @blue_moyen;
+                
+                #nom-formulaire{
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid @white;
+                }
+
+                #email-formulaire{
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid @white;
+                }
+
+                #tel-formulaire{
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid @white;
+                }
+
+                #demande-formulaire{
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid @white;
+                }            
+            }
+            
+            input[type="submit"]{
+                position: absolute;
+                right: 10px;
+                bottom: 4%;
+                height: 50px;
+                width: 50px;
+                background: @blue_moyen;
+                border: 1px solid @white;
+                font-size: 20px;
+                color: @white;
+                
+                &:hover{
+                background: @white;
+                color: @blue_moyen;
+                border: 1px solid @blue_moyen;  
+                }
+            }
+        }
+        
+        #bloc-formulaire{
+            position: absolute;
+            bottom: -50px;
+            left: 47%;
+            z-index: 20;
+
+            .bloc-picto-formulaire{
+                height: 200px;
+                width: 200px;
+                background-color: #0063b9;
+                position: absolute;
+                bottom: 0;
+                left: -100%;
+                transform: rotate(45deg);
+            }
+
+            .image-formulaire{
+                position: relative;
+                z-index: 12;
+                text-align: center;
+
+                img{
+                    display: inline-block;
+                }
+
+                .img-logo{
+                    max-height: 90px;
+                    margin-top: 20px;                 
+                }                
+            }
+        }        
+    }
+    
+    #map-home{
+        height: 300px;
+        background-color: @blue_ciel;
+    }
+    
+    #bandeau-partenaires{
+        background-color: white;
+        padding: 20px;
+        
+        h2{
+            margin: 10px 20px;
+        }
+        
+        img{
+            float: left;
+            margin: 0 30px;
+            max-height: 80px;
+        }
+    }
+    
+    #bandeau-entreprise-certifiee{
+        background-color: #dfdfdf;
+        padding: 40px;
+        text-align: center;
+        
+        p{
+            margin: 0;
+            font-size: 72px;
+        }
+    }
+    
+    #bandeau-certification{
+        background-color: white;
+        position: relative;
+        
+        .bandeau-certification-bloc{
+            margin: 30px 0;
+            left: 20%;
+
+            .redirection-certification{
+                padding: 10px 0 0 30px;  
+
+                a{
+                    color: @white;
+                    padding : 10px 30px;
+                    background-color: @blue_ciel;
+
+                    &:hover{
+                        border: 1px solid @blue_ciel;
+                        background-color: @white;     
+                        color: @blue_ciel;                    
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+            
+        .image-certification{
+
+            img{
+                position: absolute;
+                right: 0; 
+                bottom: -50px;
+                z-index: 12;
+            }
+        } 
+    }
+}
+
+   
+

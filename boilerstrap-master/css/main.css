@@ -1,0 +1,2085 @@
+body
+{
+    background-color: #DDDDDD;    
+}
+
+#page-wrapper
+{
+    padding-top: 114px;
+}
+
+h1
+{
+    font-size: 24px;
+    color: #FD5700;
+    margin-top: 0px; 
+    margin-bottom: 0px;    
+}
+
+h2
+{
+    font-size: 18px;
+    font-weight: bold;
+    color: #FD5700;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+}
+
+h3
+{
+    font-size: 18px;
+    color: #FD5700;
+    margin-top: 0px; 
+    margin-bottom: 0px;    
+}
+
+p
+{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.container
+{
+    max-width: 1170px;
+}
+
+
+
+/** MENU PRINCIPAL **/
+
+
+#main-header
+{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 2px 2px 15px #525965;
+}
+
+#primary-menu
+{
+    background-color: #145f87;
+    height: 54px;
+    color: white;
+}
+
+#primary-menu-left
+{
+  max-height: 54px;
+}
+
+#primary-menu-left img
+{
+    float: left;
+    max-height: 30px;
+    margin: auto;
+    margin-right: 20px;
+}
+
+#primary-menu-left ul
+{
+    margin-left: -25px;  
+}
+
+#primary-menu-left li
+{
+    float: left;
+    color: #ffffff;
+    padding: 3px 10px 15px 10px;
+    list-style: none;
+    margin-top: auto; 
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+
+#primary-menu-left a, #primary-menu-right a
+{
+    color: #ffffff;
+}
+
+#primary-menu-left a:hover
+{
+    color: #00A8DF;
+    text-decoration: none;
+}
+
+
+#primary-menu-right
+{
+    max-height: 54px;   
+    float: right;
+}
+
+#primary-menu-right .image-menu-1
+{
+    max-height: 30px;
+}
+
+#primary-menu-right .image-menu-2
+{
+    max-height: 30px;
+    margin: auto;
+    margin-left: 30px;
+}
+
+#primary-menu-right p
+{
+    float: right;
+    color: #ffffff;
+    list-style: none;
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin-left: 10px;
+    padding-top: 3px;
+    
+}
+
+#primary-menu-right a:hover
+{
+    color: #00A8DF;
+    text-decoration: none;
+}
+
+
+
+#secondary-menu
+{
+    background-color: #004365;
+    min-height: 40px;
+}
+
+#secondary-menu ul
+{
+    margin-left: -35px;  
+}
+
+#secondary-menu li
+{
+    float: left;
+    color: #00A8DF;
+    padding: 8px 30px 0 0;
+    list-style: none;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+#secondary-menu li a
+{
+    color: #00A8DF;
+}
+
+#secondary-menu a:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+/** CONTENU PRINCIPAL **/
+
+#main-content
+{
+    background-color: #F5F5F5;
+    max-width: 1170px;
+}
+
+#texte-bienvenue
+{
+    background-color: #ebebeb;
+    min-height: 55px;
+    margin-bottom: 16px;
+}
+
+#texte-bienvenue p
+{
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 10.5px;
+}
+
+#texte-bienvenue p a
+{
+    color: #888;
+}
+
+#texte-bienvenue p a:hover
+{
+    color: #FD5700;
+}
+
+#bandeau-live
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+
+    background-color: #20272D;
+    height: 46px;
+    margin-bottom: 20px;
+    font-size: 1em 2em;
+}
+
+#bandeau-live .title-bandeau-live
+{
+    background-color: #006BD7;
+    color: white;
+    margin-left: -15px;
+    padding: 13px 15px 0 15px;  
+    width: 128px;
+    white-space: nowrap;
+    
+}
+
+#bandeau-live a
+{
+    color: white;
+    margin: auto;
+    
+}
+
+#bandeau-live .bandeau-live-1
+{
+    padding-left: 10px;
+}
+
+#bandeau-live a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+
+
+
+/** ARTICLES EN UNE **/
+
+#articles-a-la-une
+{
+    margin-bottom: 20px;
+    min-height: 400px;
+}
+
+.bouton-test
+{
+    background-color: #FD5700;
+    max-height: 28px;
+    position: absolute;
+    top: -5px;
+    z-index: 2;
+}
+
+.bouton-test p
+{
+    font-size: 1em;
+    color: white;
+    padding: 6px 8px 6px 8px; 
+}
+
+.article-majeur
+{
+    min-height: 170px;    
+    margin-bottom: 20px;
+}
+
+
+
+.article-majeur img
+{
+    z-index: 1;
+}
+
+
+.bandeau-image
+{
+    min-height: 170px;
+    position: relative;
+}
+
+.bandeau-image figcaption
+{
+    background-color: black;
+    z-index: 2;
+    padding: 5px 10px 5px 10px;    
+    opacity: 0.5;
+    font-size: 1em;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;    
+}
+
+
+.content-item-une
+{
+    background-color: #fff;
+    border-bottom: #DDDDDD 2px solid;
+    padding: 4px 10px 0 10px;
+    min-height: 32px;
+}
+
+
+.content-item-une .autres-content
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.comment-actu-une
+{
+    text-align: right;
+    color: #999;
+}
+
+.content-item-une .type-machine
+{
+    float: left;
+    vertical-align: middle;
+}
+
+.content-item-une p
+{
+    color: #999999;
+    font-size: 0.9em;    
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 2px;
+}
+
+
+.article-majeur figcaption a
+{
+    color: #fff;
+}
+
+.article-majeur figcaption a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+
+
+/** Icône PC, PS4, ... **/
+
+.type-machine
+{
+    display: block;
+}
+
+.type-machine .type-machine-pc
+{
+    display: inline-block;
+    padding: 2px 10px 2px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    max-height: 76px;
+    background-color: #444;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.type-machine .type-machine-ps4
+{
+    display: inline-block;
+    padding: 2px 10px 2px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    max-height: 76px;
+    background-color: #06f;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.type-machine .type-machine-one
+{
+    display: inline-block;
+    padding: 2px 10px 2px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    max-height: 76px;
+    background-color: #117D10;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.type-machine .type-machine-wii-u
+{
+    display: inline-block;
+    padding: 2px 10px 2px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    max-height: 76px;
+    background-color: #5910AB;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.type-machine .type-machine-switch
+{
+    display: inline-block;
+    padding: 2px 10px 2px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    max-height: 76px;
+    background-color: #E60012;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.type-machine .type-machine-switch
+{
+    display: inline-block;
+    padding: 2px 10px 2px 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    max-height: 76px;
+    background-color: #E60012;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+/** ACTU HOME **/
+
+#actu-home
+{
+    min-height: 400px;
+    margin-bottom: 16px;
+    border-top: 1px solid grey;
+    margin-right: -5px;
+}
+
+.tab-content
+{
+    margin-bottom: 30px;
+}
+
+.nav.nav-tabs a
+{
+    color: #999;
+    background-color: #ddd;
+    height: 30px;
+    padding-top: 5px;
+}
+
+
+.actu-jour-top
+{
+    min-height: 28px;
+    height: auto;
+    max-height: 42px;    
+    border-bottom: 1px #999 solid;
+    padding-top: 5px;    
+}
+
+.actu-jour, .actu-veille
+{
+    min-height: 23px;
+    height: auto;
+    max-height: 42px;    
+    border-bottom: 1px #999 solid;
+    padding-top: 2px;    
+}
+
+.actu-veille-bottom
+{
+    min-height: 23px;
+    height: auto;
+    max-height: 42px;    
+    padding-top: 2px;      
+}
+
+.actu-jour-top span, .actu-jour span
+{
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-height: 16px;
+    height: auto;
+    max-height: 32px;
+    padding-left: 2px;
+    padding-right: 1px;    
+}
+
+
+.actu-jour-categorie-titre
+{
+    padding-left: 0;
+}
+
+.actu-jour span
+{
+    font-size: 1.3rem;
+    font-weight: bold;           
+}
+
+.actu-veille span, .actu-veille-bottom span
+{
+    font-size: 1.3rem;
+    padding-left: 2px;
+    padding-right: 1px;    
+}
+
+.date
+{
+    color: #000;
+}
+
+.categorie a
+{
+    color: #FD5700;
+}
+
+.categorie a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+.titre-actu a
+{
+    color: #000;
+}
+
+.titre-actu a:hover
+{
+    color: #FD5700;
+    text-decoration: none;    
+}
+
+.comment-actu
+{
+    text-align: right;
+    color: #999;
+}
+
+
+.redirection
+{
+    margin-top: 20px;
+    margin-bottom: 30px; 
+    display: flex;  
+    flex-direction: row-reverse;    
+}
+
+.redirection span a
+{
+    color: #FD5700;
+    min-height: 20px;
+    background-color: #E6E6E6;
+    padding: 10px;
+    margin-right: 5px;
+    
+    color: #FD5700;
+    font-size: 1rem;
+    font-weight: bold;    
+}
+
+.redirection span a:hover
+{
+    color: #fff;
+    background-color: #FD5700;
+    color: #E6E6E6;
+    text-decoration: none;
+}
+
+
+
+/** BLOCS MAJEURS / MINEURS **/
+
+
+.titre-bloc
+{
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    margin-right: -5px;
+}
+
+.titre-bloc-double
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;     
+}
+
+
+.redirection-titre
+{
+    margin-top: 20px;
+    margin-bottom: 30px; 
+  
+}
+
+.redirection-titre span a
+{
+    color: #FD5700;
+    min-height: 20px;
+    padding: 10px;
+    margin-right: 5px;
+    
+    font-size: 1.15rem;
+    font-weight: bold;    
+}
+
+.redirection-titre span a:hover
+{
+    color: #FD5700;
+    background-color: #E6E6E6;
+    text-decoration: none;
+}
+
+
+
+.titre-bloc-test
+{
+    border-top: solid 2px #DDDDDD;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 5px;
+    margin-right: -5px;
+}
+
+.titre-bloc h2
+{
+    text-align: justify;
+    height: 40px;
+    padding-top: 15px;
+}
+
+.titre-bloc h2 img, .titre-bloc-test h2 img
+{
+    height: 30px;
+    margin-right: 10px;
+}
+
+.bloc-categorie
+{
+    margin-bottom: 40px;
+    min-height: 490px;
+}
+
+.bloc-categorie-chronique
+{
+    background-color: #D4D4D4;
+    min-height: 490px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+
+.bloc-categorie-analyse
+{
+    background-color: #f5f5f5;
+    min-height: 490px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.bloc-majeur
+{
+    background-color: #ffffff;
+    min-height: 380px;
+    margin-right: -10px;
+    border-radius: 0 30px 0 0;
+}
+
+.bloc-mineur-middle
+{
+    background-color: #ffffff;
+    min-height: 86px;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-bottom: 12px;
+}
+
+.bloc-mineur-right
+{
+    background-color: #ffffff;
+    min-height: 86px;
+    margin-left: -10px;
+    margin-bottom: 12px;
+}
+
+.bloc-mineur-sous-majeur
+{
+    background-color: #ffffff;
+    min-height: 86px;
+    margin-right: -10px;
+    margin-bottom: 12px;
+}
+
+.bloc-majeur img
+{
+    border-radius: 0 30px 0 0;
+}
+
+.bloc-mineur-middle img, .bloc-mineur-sous-majeur img, .bloc-mineur-right img
+{
+    margin: 10px;
+    float: left;
+}
+
+.content-item-majeur
+{
+    padding: 10px;
+    font-size: 1.5em;
+    max-height: 76px;
+}
+
+.content-item-majeur a
+{
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.content-item-majeur a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+.content-item-majeur p
+{
+    font-size: 1.2rem;
+    color: #999999;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.content-item-majeur figcaption
+{
+    font-size: 1.2rem;
+    color: #999999;
+}
+
+.content-item
+{
+    padding: 5px 5px 0 0;
+    font-size: 1em;
+    color: black;
+    max-height: 76px;
+}
+
+.content-item h3 strong
+{
+    font-size: 1.3rem;
+    color: #FD5700;
+}
+
+.content-item a
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    line-height: 1px;
+}
+
+.content-item a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+.content-item p
+{
+    font-size: 1rem;
+    color: #999999;
+    padding-top: 3px;
+    font-weight: bold;
+}
+
+
+
+
+
+/** WEB TV + PUB **/
+
+#web-tv
+{
+    background-color: dimgrey;
+    min-height: 492px;
+    margin-left: -10px;
+    margin-bottom: 20px;
+}
+
+#bloc-titre-web-tv
+{
+    background-color: #0085b2;
+    height: 32px;
+    padding-left: 8px;
+}
+
+#bloc-titre-web-tv h2
+{
+    background-color: #0085b2;
+    height: 32px;
+    color: white;
+    padding-top: 8px;
+}
+
+
+#bandeau-pub
+{
+    background-color: white;
+    min-height: 235px;
+    margin-left: -10px;
+}
+
+
+
+
+
+/** JEUX POPULAIRES **/
+
+#jeux-populaires-et-attendus
+{
+    background-color: #f5f5f5;
+    margin-top: 15px;
+    min-height: 450px;
+}
+
+
+#jeux-populaires
+{
+    background-color: #FFFFFF;
+    min-height: 450px;
+    margin-right: -7.5px;
+    margin-bottom: 30px;
+}
+
+#jeux-attendus
+{
+    background-color: #FFFFFF;
+    min-height: 450px;
+    margin-left: -7.5px;
+    margin-bottom: 30px;
+}
+
+.liste-jeux
+{
+    padding: 15px;
+}
+
+.liste-jeux h3
+{
+    padding: 5px 0 15px 0;
+    border-bottom: 4px solid #E6E6E6;
+    margin-bottom: 16px;
+}
+
+.liste-jeux ol
+{
+    margin-left: -40px;
+    list-style: none;
+}
+
+.liste-jeux-bloc-chiffres
+{
+    display: flex;
+    flex-direction: row;    
+}
+
+.liste-jeux-bloc-chiffres span
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    height:32px;
+    width:32px;
+    text-align: center;
+    background-color: #004365;
+    padding: 6px;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.liste-jeux li
+{
+    padding: 8px 0 10px 10px;
+    height: 32px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: #E6E6E6;
+    color: #004365;    
+}
+
+.liste-jeux li:hover
+{
+    color: #E6E6E6;
+    background-color: #004365;
+}
+
+.liste-jeux .titre-redir-liste-jeux
+{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+#jeux-attendus .titre-redir-liste-jeux-1 a, #jeux-populaires .titre-redir-liste-jeux-1 a
+{
+    background-color: #E6E6E6;
+    padding: 10px;
+    margin-right: 10px;
+    
+    color: #FD5700;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#jeux-attendus a, #jeux-populaires a
+{
+    background-color: #FD5700;
+    padding: 10px;
+    margin-right: 10px;
+    
+    color: #E6E6E6;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#jeux-attendus .titre-redir-liste-jeux-1 a:hover, #jeux-populaires .titre-redir-liste-jeux-1 a:hover
+{
+    background-color: #FD5700;
+    color: #E6E6E6;
+    text-decoration: none;
+}
+
+#jeux-attendus a:hover, #jeux-populaires a:hover
+{
+    background-color: #E6E6E6;
+    color: #FD5700;
+    text-decoration: none;    
+}
+
+
+/** BAS DE PAGE **/
+
+#bas-de-page
+{
+    background-color: #ffffff;
+    min-height: 650px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+#bloc-sondage
+{
+    background-color: #525965;
+    min-height: 650px;
+    padding: 20px;
+}
+
+#bloc-sondage h3
+{
+    font-size: 2.5rem;
+    color: #83888F;
+    padding-bottom: 20px;
+}
+
+#bloc-sondage p
+{
+    font-size: 1.5rem;
+    color: #FFBF00;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+table
+{
+    border-collapse: separate;
+    border-spacing: 15px 15px; 
+    margin-top: 10px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.avancee-pourcentage
+{
+    width: 100px;
+    background-color: #5C626B;
+}
+
+
+.avancee-pourcentage .pourcentage
+{
+    height: 24px;
+    font-size: 1rem;
+    text-align: right;
+    background-color: #444A55;
+    padding-right: 5px;
+    padding-top: 5px;
+    color: #fff;
+}
+
+.avancee-pourcentage .barre-pourcentage-1
+{
+    width: 13%;
+    height: 10px;
+    background-color: #FD5700;
+}
+
+.avancee-pourcentage .barre-pourcentage-2
+{
+    width: 24%;
+    height: 10px;
+    background-color: #FD5700;
+}
+
+.avancee-pourcentage .barre-pourcentage-3
+{
+    width: 59%;
+    height: 10px;
+    background-color: #FD5700;
+}
+
+.avancee-pourcentage .barre-pourcentage-4
+{
+    width: 5%;
+    height: 10px;
+    background-color: #FD5700;
+}
+
+table .reponse
+{
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+
+.resultats-votes
+{
+    margin: 20px 0 40px 0;
+    height: 40px;
+}
+
+.votes
+{
+    float: left;
+}
+
+.resultats-votes span
+{
+    font-size: 1.3rem;
+    color: #FD5700;
+    font-weight: normal;
+}
+
+.reagissez-votes
+{
+    float: right;
+}
+
+.resultats-votes a
+{
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+#bloc-sondage a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+#bloc-sondage .autres-sondages a
+{
+    background-color: #444A55;
+    padding: 10px;
+    margin-right: 10px;
+    
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#bloc-sondage .autres-sondages a:hover
+{
+    background-color: #fff;
+    color: #FD5700;
+
+}
+
+
+#bloc-autres
+{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+
+#top-forums
+{
+    min-height: 180px;
+}
+
+.titre-bloc-boutique
+{
+    margin-bottom: 10px;
+}
+
+.titre-bloc-boutique h2
+{
+    max-height: 40px;
+    padding: 5px 0 5px 0;
+}
+
+.titre-bloc-boutique h2 img
+{
+    height: 30px;
+    margin-right: 10px;
+}
+
+#top-forums ol
+{
+    margin-left: -20px;
+    color: #004365;
+    font-weight: bold;    
+}
+
+#top-forums li a
+{
+    color: #004365;
+    font-weight: bold;
+}
+
+#top-forums li a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+
+
+#autres-forums
+{
+    min-height: 180px;
+    margin-left: -15px;
+}
+
+#autres-forums p
+{
+    color: #004365;
+    font-weight: bold; 
+    font-size: 1.5rem;
+}
+
+#autres-forums a
+{
+    color: #004365;
+    font-weight: bold;
+}
+
+#autres-forums a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+
+
+.redirection-titre-forum
+{
+    padding-top: 20px;
+    margin-bottom: 30px; 
+    border-top: 2px #D4D4D4 solid;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.redirection-titre-forum span a
+{
+    color: #FD5700;
+    background-color: #E6E6E6;
+    min-height: 20px;
+    padding: 10px;
+    margin-right: 5px;
+    
+    font-size: 1rem;
+    font-weight: bold;    
+}
+
+.redirection-titre-forum span a:hover
+{
+    color: #E6E6E6;
+    background-color: #FD5700;
+    text-decoration: none;
+}
+
+.titre-redir-forums
+{
+    padding: 20px 0 50px 0;
+}
+
+
+.titre-redir-forums a
+{
+    float: right;
+    font-size: 1.2rem;
+    color: #FD5700;
+    font-weight: bold; 
+    padding-right: 30px;
+}
+
+.titre-redir-forums a:hover
+{
+    color: #00A8DF;
+    text-decoration: none;
+}
+
+
+
+.boutique-mineur
+{
+    height: 90px;
+    border-bottom: 1px solid #888;
+    margin-bottom: 13.5px;
+    margin-right: 10px;
+}
+
+.boutique-mineur img
+{
+    float: left;
+}
+
+.boutique-mineur .content-item
+{
+    padding-left: 90px;
+}
+
+.boutique-mineur .content-item a
+{
+    font-size: 1.3rem;
+    color: #888;
+}
+
+.boutique-mineur .content-item span a
+{
+    color: #FF4000;
+    font-size: 1.5rem;    
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.boutique-mineur .content-item a:hover
+{
+    color: #FF4000;
+}
+
+
+
+/** FOOTER **/
+
+#main-footer
+{
+    min-height: 400px;
+    margin-top: 30px;
+}
+
+#footer-rs
+{
+    background-color: #D4D4D4;
+    min-height: 58px;
+    
+    padding-top: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+#footer-rs-left
+{
+    float: left;
+    display: flex;
+    flex-direction: row;
+}
+
+#footer-rs-left ul
+{
+    margin-left: -25px;
+}
+
+#footer-rs-left li
+{
+    float: left;
+    color: #ffffff;
+    background-color: #004365;
+    margin-right: 10px;
+    list-style: none;
+    padding: 5px 12px 5px 12px;
+    margin-top: -5px; 
+    border-radius: 50%;
+    font-weight: normal;
+}
+
+#footer-rs-left li:hover
+{
+    background-color: #006BD7;
+}
+
+
+#footer-rs-right
+{
+    float: right;
+    display: flex;
+    flex-direction: row;   
+}
+
+#footer-rs-right span
+{
+    margin-right: -40px;     
+}
+
+#footer-rs-right li
+{
+    float: right;
+    background-color: white;
+    background-color: #004365;    
+    color: #ffffff;    
+    margin-left: 10px; 
+    list-style-type: circle;
+    list-style: none;
+    padding: 5px 10px 5px 10px;
+    margin-top: -5px; 
+    border-radius: 5px;
+}
+
+#footer-rs-right li:hover
+{
+    background-color: #006BD7;
+}
+
+
+#footer-infos
+{
+    background-color: #004365;
+    min-height: 380px;
+}
+
+#contenu-footer-infos
+{
+    padding-top: 33.750px;
+    max-width: 1170px;
+}
+
+
+.video-ml
+{
+    min-height: 250px;
+}
+
+.video-ml h3
+{
+    color: #fff;
+}
+
+.video-ml img
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video-ml a
+{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;    
+}
+
+.video-ml a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+.video-ml p
+{
+    font-size: 1.2rem;
+    color: #999999;
+    padding-top: 10px;
+    font-weight: bold;   
+}
+
+
+#liens-contact
+{
+    min-height: 25px;
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+#liens-contact span a
+{
+    padding-top: 5px;
+    padding-right: 32px;
+    padding-left: 32px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    list-style: none; 
+    color: white;
+}
+
+#liens-contact a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+#footer-ml
+{
+    background-color: #002f46;
+    min-height: 78px;
+    padding-top: 20px;
+}
+
+#footer-ml img
+{
+    height: 30px;
+    float: right;
+}
+
+#footer-ml p
+{
+    height: 30px;
+    color: #ffffff;
+    margin: auto;
+    font-size: 1.1rem;
+    float: left;
+}
+
+#footer-ml a
+{
+    color: #00A8DF;
+}
+
+#footer-ml a:hover
+{
+    color: #FD5700;
+    text-decoration: none;
+}
+
+
+
+
+
+/* 1200 PX */
+
+@media (max-width: 1200px)
+{
+        
+    .actu-jour-top span, .actu-jour span, .actu-veille span, .actu-veille-bottom span
+    {
+        max-height: 16px;
+        overflow: hidden;
+    }  
+    
+    
+    #boutique
+    {
+        display: none;
+    }   
+    
+    
+    .content-item-titre 
+    {
+    max-height: 20px;
+    } 
+    
+    .content-item-titre a
+    {
+    overflow: hidden;
+    } 
+    
+    
+      #bloc-sondage
+    {
+        min-height: auto;
+        padding-bottom: 30px;
+    }
+    
+    
+       #bloc-autres
+    {
+        margin-left: 15px;
+    }
+    
+    #liens-contact
+    {
+        max-height: 35px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #liens-contact span a
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 1.4rem;
+    }
+    
+    #bas-de-page
+    {
+        min-height: 745px;     
+    }
+    
+}
+
+
+
+/* 991 PX */
+
+@media (max-width: 991px)
+{
+    
+    
+    #page-wrapper
+    {
+        padding-top: 74px;
+    }
+    
+    #primary-menu-left li
+    {
+        display: none;
+    }  
+        
+    
+    #secondary-menu
+    {
+        display: none;
+    }
+    
+    
+    #texte-bienvenue p
+    {
+        margin-bottom: 5px;  
+    }    
+
+    
+    .bandeau-live-4, .bandeau-live-5 
+    {
+        display: none;
+    }        
+    
+    
+
+    .actu-jour-top
+    {
+        min-height: 44px;
+        padding-top: 5px;
+    }
+    
+    .actu-jour, .actu-veille, .actu-veille-bottom
+    {
+        min-height: 42px;
+        padding-top: 3px;
+    }    
+
+    
+    #bandeau-pub
+    {
+        display: none;
+    }
+        
+    .bloc-categorie-chronique
+    {
+        min-height: 680px;
+    }
+    
+    .bloc-categorie-bandes-annonces
+    {
+        min-height: 680px;
+    }
+    
+    .bloc-categorie-analyse
+    {
+        min-height: 680px;
+    }
+    
+    #bloc-autres
+    {
+        margin-left: 15px;
+    }
+    
+    #web-tv
+    {
+        margin-left: 0;
+    }
+    
+    
+    .bloc-majeur
+    {
+        margin-left: -5px;
+        margin-right: -5px;
+        margin-bottom: 10px;
+    }
+    
+    .bloc-mineur-sous-majeur
+    {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    
+    .bloc-mineur-right
+    {
+        margin-right: -5px;
+        margin-left: -5px;
+    }  
+    
+
+    
+    #jeux-attendus .titre-redir-liste-jeux, #jeux-populaires .titre-redir-liste-jeux
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        min-height: 90px;
+        margin-bottom: -10px;
+    }
+    
+    #boutique
+    {
+        display: none;
+    }
+    
+    
+        #bas-de-page
+    {
+        min-height: 745px;     
+    }
+    
+    #footer-rs
+    {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    
+    #footer-rs-right span
+    {
+        display: none;
+    }
+    
+
+     .video-ml
+    {
+        max-width: 380px;
+    }
+    
+    
+    #liens-contact
+    {
+        max-height: 105px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        
+        flex-wrap: wrap;
+    }
+
+    #liens-contact span a
+    {
+        padding: 15px;
+        margin: 10px 0 10px 0;
+    }    
+    
+    #liens-contact span
+    {
+        margin: 10px 0 10px 0;
+    } 
+    
+    
+    #contenu-footer-rs .row > div
+    {
+        text-align: center;
+    }
+    
+    #contenu-footer-rs .row > div .row
+    {
+        display: inline-block;
+    }    
+    
+    #footer-rs-right ul
+    {
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    
+    #footer-rs-right ul li
+    {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    
+    #footer-rs-right ul li+li
+    {
+    }
+    
+
+    #footer-ml .footer-ml-logo img
+    {
+        min-height: 30px;
+        float: none;     
+    }
+    
+    #footer-ml .footer-ml-ml p
+    {
+        margin-top: 10px;
+        min-height: 50px;
+        text-align: center;
+        float: none;
+    }
+    
+    
+    .footer-ml-logo > img
+    {
+        display: inline-block;
+    }
+    
+    .footer-ml-logo /* Sur la div parent elle-même, pour lui signifier que ses enfants doivent être centrés */
+    {
+        position: relative;
+        text-align: center;
+        padding: 5px 0; 
+    }
+    
+    
+}
+
+
+
+/* 750 PX */
+
+@media (max-width: 750px)
+{
+    
+    #body
+    {
+        margin-right: -15px;
+    }
+    
+    #primary-menu-right 
+    {
+        margin-right: 15px;
+    }
+    
+    #primary-menu-right .image-menu-2
+    {
+        margin-left: 15px;
+    }
+
+
+    #texte-bienvenue p
+    {
+        padding: 0 10px 0 10px;
+    }  
+    
+    
+    .bandeau-live-3
+    {
+        display: none;
+    }    
+    
+    
+    .actu-jour-top
+    {
+        min-height: 44px;
+        padding-top: 5px;
+    }
+    
+    .actu-jour, .actu-veille, .actu-veille-bottom
+    {
+        min-height: 42px;
+        padding-top: 3px;
+    }   
+    
+    
+    .titre-bloc-double
+    {
+        flex-direction: column;
+    }
+    
+    .titre-bloc-double .titre-bloc
+    {
+        margin-bottom: 0;
+    }
+    
+    .redirection-titre
+    {
+        margin-top: 0;
+    }
+    
+    
+    .bloc-majeur
+    {
+        margin-left: -5px;
+        margin-right: -5px;
+        margin-bottom: 10px;
+    }
+    
+    .bloc-mineur-sous-majeur
+    {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    
+    .bloc-mineur-right
+    {
+        margin-right: -5px;
+        margin-left: -5px;
+    }  
+    
+    #autres-forums
+    {
+        margin-left: 0;
+    }
+        
+    
+    .bloc-categorie-chronique
+    {
+        min-height: 1280px;
+    }
+    
+    .bloc-categorie-bandes-annonces
+    {
+        min-height: 1280px;
+    }
+    
+    .bloc-categorie-analyse
+    {
+        min-height: 1250px;
+    }
+    
+    #bloc-autres
+    {
+        margin-left: 15px;
+    }
+    
+    
+    
+    #jeux-attendus .titre-redir-liste-jeux, #jeux-populaires .titre-redir-liste-jeux
+    {
+        min-height: 50px;
+        margin-bottom: -10px;
+    }
+    
+    
+    .redirection-video-une
+    {
+        display: none;
+    }
+    
+    
+
+    
+    .bloc-videos-ml .video-ml
+    {
+        max-width: 300px;
+    }
+    
+    .bloc-videos-ml .row > div
+    {
+        text-align: center;
+    }
+    
+    .bloc-videos-ml .row > div .video-ml 
+    {
+        display: inline-block;
+    }
+    
+    
+    #bas-de-page
+    {
+        padding-right: -15px;
+        min-height: 925px;     
+    }
+    
+    
+
+    
+}
+
+
+
+/* 565 PX */
+
+@media (max-width: 565px)
+{
+
+    
+    .image-menu-1
+    {
+        margin-right: 15px;
+    }  
+    
+    .image-menu-2
+    {
+        display: none;
+    }  
+    
+    .bandeau-live-2
+    {
+        display: none;
+    }    
+    
+    
+    .actu-jour-top
+    {
+        min-height: 62px;
+        padding-top: 5px;
+    }
+    
+    .actu-jour, .actu-veille, .actu-veille-bottom
+    {
+        min-height: 61px;
+        padding-top: 3px;
+    }        
+
+
+     .actu-jour .date
+    {
+        z-index: 2;
+    }
+    
+    .actu-jour-categorie-titre
+    {
+        padding-left: 8px;
+    }
+    
+    .actu-jour-top span, .actu-jour span, .actu-veille span, .actu-veille-bottom span
+    {
+        max-height: 36px;
+        overflow: normal; 
+    }  
+    
+    .bloc-majeur
+    {
+        margin-left: -5px;
+        margin-right: -5px;
+        margin-bottom: 10px;
+    }
+    
+    .bloc-mineur-sous-majeur
+    {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    
+    .bloc-mineur-right
+    {
+        margin-right: -5px;
+        margin-left: -5px;
+    }    
+    
+    .bloc-categorie-chronique
+    {
+        min-height: 1300px;
+    }
+    
+    .bloc-categorie-bandes-annonces
+    {
+        min-height: 1300px;
+    }
+    
+    .bloc-categorie-analyse
+    {
+        min-height: 1270px;
+    }
+    
+    #bas-de-page
+    {
+        min-height: 945px;     
+    }
+    
+    
+    #jeux-populaires-et-attendus
+    {
+        margin-left: -5px;
+        margin-right: 2px;
+    }
+    
+    #jeux-attendus
+    {
+        margin-left: 2px;
+        margin-right: -8px;
+    }
+    
+    
+    .titre-redir-liste-jeux-1
+    {
+        margin-right: -5px;
+    }
+    
+    .titre-redir-liste-jeux-2
+    {
+        margin-right: -5px;
+    }
+    
+    
+    .redirection-videos, .redirection-video-une
+    {
+        display: none;
+    }    
+    
+    
+    .bloc-videos-ml
+    {
+        justify-content: center;
+    }
+    
+    
+    #liens-contact
+    {
+        max-height: 105px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        
+        flex-wrap: wrap;
+    }
+
+    #liens-contact span a
+    {
+        padding: 15px;
+        margin: 10px 0 10px 0;
+        font-size: 1.4rem;
+    }    
+    
+    #liens-contact span
+    {
+        margin: 10px 0 10px 0;
+        
+    } 
+    
+    #footer-ml .footer-ml-ml p
+    {
+        min-height: 50px;
+    }
+    
+    .footer-ml-logo 
+    {
+        padding-top: 0;
+    }
+    
+
+    
+}

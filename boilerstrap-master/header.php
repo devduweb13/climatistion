@@ -34,7 +34,7 @@
       <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
     <![endif]-->
     <?php wp_head(); ?>
-  
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>" />
     <meta property="og:url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
@@ -46,7 +46,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/img/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/img/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/img/ico/apple-touch-icon-57-precomposed.png">
-    
+
     <!-- BoilerStrap CSS Goes Here -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.css" type="text/css" media="all" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap-responsive.css" type="text/css" media="all" />
@@ -57,6 +57,17 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/typography.css" type="text/css" media="all" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/palette.css" type="text/css" media="all" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/custom.css" type="text/css" media="all" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <?php if ( is_admin_bar_showing() ) {?>
     	<style>
     		#site-navigation { top: 28px !important; }
@@ -68,11 +79,12 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/keypress-1.0.1.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/boilerstrap.js" type="text/javascript"></script>
-    
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
   </head>
 
 <body <?php body_class(); ?>>
-
+      <div id="page-wrapper">
+<?php /*
   <div id="site-navigation" class="navbar navbar-fixed-top" role="navigation">
     <div class="navbar-inner">
       <div class="container">
@@ -82,7 +94,7 @@
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
         <a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'boilerstrap' ); ?>"><?php _e( 'Skip to content', 'boilerstrap' ); ?></a>
         <div class="nav-collapse collapse">
-  	  	<?php 
+  	  	<?php
   	  	    wp_nav_menu( array(
   	  	        'menu'       => 'top_menu',
   	  	        'depth'      => 3,
@@ -99,20 +111,61 @@
   				</form>
   			</div>
   			</form>
-  
+
         </div><!--/.nav-collapse -->
       </div>
     </div>
   </div>
-  
-  <div id="page" class="hfeed site container">
+  <?php  */ ?>
+
+  <header id="main-header" class="clearfix">
+
+      <nav id="primary-menu" class="col-xs-12">
+          <div class="container">
+              <div class="row">
+
+              <div id="menu-left">
+                  <ul>
+                      <li><a href="">Nos services</a></li>
+                      <li><a href="">Votre estimation</a></li>
+                  </ul>
+              </div>
+
+              <div id="menu-right">
+                  <ul>
+                      <li><a href="">Nos certifications</a></li>
+                      <li><a href="">Contactez-nous</a></li>
+                  </ul>
+              </div>
+
+              </div>
+          </div>
+      </nav>
+
+      <div id="logo-flottant">
+
+          <div class="contenu-logo">
+            <a href="<?php bloginfo('url'); ?>" title="spécialiste climatisation paca">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="img-logo" alt="logo-climatisation"><br>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/accroche.png" class="img-accroche" alt="logo-climatisation">
+            </a>
+          </div>
+
+          <div class="bloc-logo"></div>
+
+      </div>
+
+  </header>
+
+
+  <div >
   	<header id="masthead" class="site-header" role="banner">
-  		
+
   		<?php $header_image = get_header_image();
   		if ( ! empty( $header_image ) ) : ?>
   			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
   		<?php endif; ?>
   	</header><!-- #masthead -->
-  
-  	<div id="main" class="wrapper">
+
+  	<div id="main-content" class="">
   <div class="row-fluid">

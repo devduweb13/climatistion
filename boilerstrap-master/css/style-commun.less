@@ -1,0 +1,82 @@
+/* Déclaration */
+
+    /* Couleurs */
+    @grey_fonce_pc: #444;
+    @white: #fff;
+    @bleu_cyan: #06f;
+    @violet: #5910AB;
+    @vert: #117D10;
+    @rouge: #E60012;
+
+    /* Text alignement */
+    @text_align: center;
+
+    /* Text size */
+    @font-size: 1rem;
+
+    /* Padding */
+    @padding_type_machine: 2px 10px 2px 10px;
+
+    /* Inline-block */
+    @display_inline_block: inline-block;
+
+
+    /* Border Radius  */
+    .border-radius-machine (@radius: 5px) {
+        -moz-border-radius: @radius;
+        -webkit-border-radius: @radius;
+        border-radius: @radius;
+    }
+
+
+/* Utilisation */
+
+.type-machine{
+    color: @white;
+
+    .type-machine-pc{
+        display: @display_inline_block;
+        padding: @padding_type_machine;
+        font-size: @font-size;
+        background-color: @grey_fonce_pc;
+        text-align: @text_align;
+        .border-radius-machine;
+    }
+
+    .type-machine-ps4{
+        display: @display_inline_block;
+        padding: @padding_type_machine;
+        font-size: @font-size;
+        background-color: @bleu_cyan;
+        text-align: @text_align;
+        .border-radius-machine;
+    }
+
+    .type-machine-one{
+        display: @display_inline_block;
+        padding: @padding_type_machine;
+        font-size: @font-size;
+        background-color: @vert;
+        text-align: @text_align;
+        .border-radius-machine;
+    }
+
+    .type-machine-wii-u{
+        display: @display_inline_block;
+        padding: @padding_type_machine;
+        font-size: @font-size;
+        background-color: @violet;
+        text-align: @text_align;
+        .border-radius-machine;
+    }
+
+    .type-machine-switch{
+        display: @display_inline_block;
+        padding: @padding_type_machine;
+        font-size: @font-size;
+        background-color: @rouge;
+        text-align: @text_align;
+        .border-radius-machine;
+    }
+
+}

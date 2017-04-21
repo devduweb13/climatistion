@@ -1,0 +1,142 @@
+/* Déclaration */
+
+    /* Couleurs */
+    @white: #fff;
+    @blue_ciel: #00aeef;
+    @blue_moyen: #0063b9;
+    @grey_clair: #f0edeb;
+    @grey_clair2: #dfdfdf;
+
+
+    /* Taille image */
+    @height_menu1_image: 30px;
+
+
+    /* Font */
+    @fontsize_menu1: 1.8rem;
+    @fontsize_menu2: 1.5rem;
+
+
+    /* Margin */
+    @margin_menu1: 20px;
+    @margin_menu2: -40px;
+
+
+    /* Margin-image */
+    @margin_img_logo: 13px 0;
+    @margin_img: 13px 0;
+    @margin_img_loupe: 13px 20px 13px 0;
+
+
+    /* Padding */
+    @padding_liste_menu1: 15px 0 15px 15px;
+    @padding_liste_menu1_mineur: 15px 0 15px 5px;
+    @padding_liste_menu2: 9px 25px 9px 0;
+   
+
+
+
+/* Utilisation */
+
+#main-header{ 
+    background-color: @blue_moyen; 
+
+    .container .row{
+        
+        #menu-left{
+            float: left;
+            
+            ul{
+                padding: 0;
+                
+                li:first-child{
+                    border-right: @white 2px solid;
+                }
+                
+                li{
+                    float: left;
+                    padding: 5px 15px;
+                    margin: 10px 0;
+                    list-style: none;                
+                    
+                    a{    
+                        color: @white;
+                        font-size: 16px;
+
+                        &:hover{
+                            text-decoration: none;
+                            color: #00aeef;
+                        }
+                    }
+                }
+            }
+        }
+        
+        #menu-right{
+            float: right;
+            
+            ul{
+
+                li:first-child{
+                    border-right: @white 2px solid;
+                }
+                
+                li{
+                    float: left;
+                    padding: 5px 15px;
+                    margin: 10px 0;
+                    list-style: none;
+
+                    a{    
+                        color: @white;
+                        font-size: 16px;
+
+                        &:hover{
+                            text-decoration: none;
+                            color: #00aeef;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    #logo-flottant{
+        position: absolute;
+        top: 0;
+        left: 49%;
+        transform: translateX(-50%);
+        
+        .bloc-logo{
+            height: 450px;
+            width: 450px;
+            background-color: @white;
+            position: absolute;
+            top: -225px;
+            left: -35%;
+            transform: rotate(45deg);
+            z-index: 10;
+        }
+        
+        .contenu-logo{
+            position: relative;
+            z-index: 12;
+            text-align: center;
+            
+            img{
+                display: inline-block;
+            }
+            
+            .img-logo{
+                max-height: 90px;
+                margin-top: 20px;                 
+            }
+
+            .img-accroche{
+                max-height: 80px;
+                margin-top: 20px;                  
+            }
+            
+        }    
+    }
+}

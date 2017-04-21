@@ -1,0 +1,71 @@
+/* Déclaration */
+
+    /* Couleurs */
+    @white: #fff;
+    @black: #000;
+    @blue_ciel: #00aeef;
+    @blue_moyen: #0063b9;
+    @grey_clair: #f0edeb;
+    @grey_clair2: #dfdfdf;
+    
+
+    /* Font */
+    @fontsize_h1: 24px;
+    @fontsize_h2: 20px;
+    @fontsize_h3: 18px;
+    @fontsize_p: 14px;
+
+
+    /* Width */
+    @width_page: 1170px;
+
+
+    /* Margin */
+    @margin_h: 0 0;
+
+
+    /* Padding */
+    @padding_h: 10px 0;
+
+
+/* Utilisation */
+
+body{ 
+      
+    h1{
+        font-size: @fontsize_h1;
+        font-weight: bold;            
+        color: @black;
+        margin: @margin_h; 
+        padding: @padding_h;
+    }
+
+    h2{
+        font-size: @fontsize_h2;
+        font-weight: bold;
+        color: @black;
+        margin: @margin_h; 
+        padding: @padding_h;
+    }
+
+    h3{
+        font-size: @fontsize_h3;
+        font-weight: bold;            
+        color: @black;
+        margin: @margin_h;      
+    }
+
+    p{
+        font-size: @fontsize_p;
+        margin: @margin_h;
+        color: @black;
+    }
+
+    .container{
+        max-width: @width_page;
+    }
+
+    ul{
+        margin: 0;    
+    }        
+}

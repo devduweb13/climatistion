@@ -1,0 +1,209 @@
+/* Déclaration */
+
+    /* Couleurs */
+    @white: #fff;
+    @blue_ciel: #00aeef;
+    @blue_moyen: #0063b9;
+    @grey_clair: #f0edeb;
+    @grey_clair2: #dfdfdf;
+
+
+    /* Taille image */
+    @height_ml_img: 30px;
+
+
+    /* Font */
+    @font_size: 1.5rem;
+    @font_size_p: 1.2rem;
+
+
+    /* Margin */
+    @margin_footer: 30px;
+
+        /* Margin RS */
+        @margin_rs: 10px;
+        @margin_rs_left_ul: 10px;
+
+        /* Margin Infos */
+        @margin_infos_img: 20px 0;  
+
+
+    /* Padding */
+    @padding_footer: 20px;
+
+        /* Padding RS */
+        @padding_rs_span: 15px 0;
+        @padding_rs_ul: 10px 0;
+        @padding_rs_li: 5px 12px 5px 12px;
+
+        /* Padding Infos */
+        @padding_infos: 30px 0;
+        @padding_infos_a: 20px;
+        @padding_infos_p: 10px;
+        @padding_liens_contact_a: 5px 32px;
+
+        /* Padding ML */
+        @padding_ml: 10px 0;
+        @padding_infos_a: 20px;
+        @padding_infos_p: 10px;
+        @padding_liens_contact_a: 5px 32px;
+
+
+    /* Border Radius RS */
+    .border-radius (@radius: 10px) {
+        -moz-border-radius: @radius;
+        -webkit-border-radius: @radius;
+        border-radius: @radius;
+    }
+
+
+/* Utilisation */
+
+#main-footer{ 
+    clear: both;
+    background: url(footer-web.png);
+    color: @white;
+    width: 100%;
+    min-height: 308px;
+    
+    #footer-contact{
+        padding: 20px;
+        
+        h2{
+            padding-bottom: 20px;
+            margin: 0;
+            color: @white;
+        }
+       
+        .footer-contact-adresse{
+            float: left;
+            padding-bottom: 10px;
+            
+            img{
+                float: left;
+            }
+
+            p{
+                float: left;
+                padding: 0 20px;
+                color: @white;
+            } 
+        }
+        
+        .footer-contact-mail{
+            padding-bottom: 20px;
+            clear: both;
+            
+            img{
+                float: left;
+            }
+
+            p{
+                float: left;
+                padding: 0 20px;
+                color: @white;
+            } 
+        }
+    }
+        
+    #footer-job{
+        font-weight: bold;
+        padding: 20px;
+        
+        h2{
+            padding-bottom: 20px;
+            margin: 0;
+            color: @white;
+        }
+        
+        p{
+            color: @white;
+            font-weight: normal;
+            padding: 0 10px 10px 0;
+        }
+        
+        
+        .redirection-footer-job{
+            
+            p{
+                margin: 15px 0;
+
+                a{
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    color: @blue_moyen;
+                    font-weight: normal;
+                    background-color: @grey_clair;
+                    opacity: 0.6;
+
+                    &:hover{
+                        text-decoration: none;
+                        background-color: @blue_moyen;
+                        color: @white;
+                        opacity: 1;
+                        border: 1px solid @white;                     
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    #footer-formulaire{
+        font-weight: bold;
+        padding: 20px;
+        
+        h2{
+            padding-bottom: 20px;
+            margin: 0;
+            color: @white;
+        }
+        
+        form{
+            display: inline;
+        
+            p{
+                font-size: 12px;
+                font-weight: bold;
+                color: @blue_moyen;
+                
+                #nom-formulaire{
+                    float: left;
+                    width: 48%;
+                    padding: 5px 10px;
+                    border: 1px solid @white;
+                    margin-bottom: 5px;
+                }
+
+                #email-formulaire{
+                    float: right;
+                    width: 48%;
+                    padding: 5px 10px;
+                    border: 1px solid @white;
+                    margin-bottom: 5px;
+                }
+
+                #demande-formulaire{
+                    width: 100%;
+                    padding: 5px 10px;
+                    border: 1px solid @white; 
+                }
+            }
+            
+            input[type="submit"]{
+                float: right;
+                background: @blue_moyen;
+                border: 1px solid @white;
+                font-size: 12px;
+                color: @white;
+
+                &:hover{
+                    background: @white;
+                    color: @blue_moyen;
+                    border: 1px solid @blue_moyen;  
+                }
+            }    
+            
+        }
+    } 
+}        
