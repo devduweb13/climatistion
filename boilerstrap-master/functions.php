@@ -106,7 +106,7 @@ function boilerstrap_scripts_styles() {
 	 * [https://github.com/twittem/wp-bootstrap-navwalker]
 	 *
 	 */
-	
+
 	/**
 	 * Class Name: twitter_bootstrap_nav_walker
 	 * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
@@ -115,9 +115,9 @@ function boilerstrap_scripts_styles() {
 	 * Author: Edward McIntyre - @twittem
 	 * Licence: WTFPL 2.0 (http://sam.zoy.org/wtfpl/COPYING)
 	 */
-	
+
 	class twitter_bootstrap_nav_walker extends Walker_Nav_Menu {
-		
+
 		/**
 		 * @see Walker::start_lvl()
 		 * @since 3.0.0
@@ -127,9 +127,9 @@ function boilerstrap_scripts_styles() {
 		 */
 		function start_lvl( &$output, $depth ) {
 			$indent = str_repeat( "\t", $depth );
-			$output	   .= "\n$indent<ul class=\"dropdown-menu\">\n";		
+			$output	   .= "\n$indent<ul class=\"dropdown-menu\">\n";
 		}
-	
+
 		/**
 		 * @see Walker::start_el()
 		 * @since 3.0.0
@@ -140,56 +140,56 @@ function boilerstrap_scripts_styles() {
 		 * @param int $current_page Menu item ID.
 		 * @param object $args
 		 */
-	
+
 		function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 			global $wp_query;
 			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-	
+
 			if (strcasecmp($item->title, 'divider')) {
 				$class_names = $value = '';
 				$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 				$classes[] = ($item->current) ? 'active' : '';
 				$classes[] = 'menu-item-' . $item->ID;
 				$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-	
+
 				if ($args->has_children && $depth > 0) {
 					$class_names .= ' dropdown-submenu';
 				} else if($args->has_children && $depth === 0) {
 					$class_names .= ' dropdown';
 				}
-	
+
 				$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-	
+
 				$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
 				$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-	
+
 				$output .= $indent . '<li' . $id . $value . $class_names .'>';
-	
+
 				$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
 				$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 				$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 				$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 				$attributes .= ($args->has_children) 	    ? ' data-toggle="dropdown" data-target="#" class="dropdown-toggle noeffect"' : '';
-	
+
 				$item_output = $args->before;
 				$item_output .= '<a'. $attributes .'>';
 				$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 				$item_output .= ($args->has_children && $depth == 0) ? ' <span class="caret"></span></a>' : '</a>';
 				$item_output .= $args->after;
-	
+
 				$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 			} else {
 				$output .= $indent . '<li class="divider">';
 			}
 		}
-	
-	
+
+
 		/**
 		 * Traverse elements to create list from elements.
 		 *
 		 * Display one element if the element doesn't have any children otherwise,
 		 * display the element and its children. Will only traverse up to the max
-		 * depth and no ignore elements under that depth. 
+		 * depth and no ignore elements under that depth.
 		 *
 		 * This method shouldn't be called directly, use the walk() method instead.
 		 *
@@ -204,30 +204,30 @@ function boilerstrap_scripts_styles() {
 		 * @param string $output Passed by reference. Used to append additional content.
 		 * @return null Null on failure with no changes to parameters.
 		 */
-	
+
 		function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
-			
+
 			if ( !$element ) {
 				return;
 			}
-			
+
 			$id_field = $this->db_fields['id'];
-	
+
 			//display this element
-			if ( is_array( $args[0] ) ) 
+			if ( is_array( $args[0] ) )
 				$args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
-			else if ( is_object( $args[0] ) ) 
-				$args[0]->has_children = ! empty( $children_elements[$element->$id_field] ); 
+			else if ( is_object( $args[0] ) )
+				$args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
 			$cb_args = array_merge( array(&$output, $element, $depth), $args);
 			call_user_func_array(array(&$this, 'start_el'), $cb_args);
-	
+
 			$id = $element->$id_field;
-	
+
 			// descend only when the depth is right and there are childrens for this element
 			if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
-	
+
 				foreach( $children_elements[ $id ] as $child ){
-	
+
 					if ( !isset($newlevel) ) {
 						$newlevel = true;
 						//start the child delimiter
@@ -238,19 +238,19 @@ function boilerstrap_scripts_styles() {
 				}
 					unset( $children_elements[ $id ] );
 			}
-	
+
 			if ( isset($newlevel) && $newlevel ){
 				//end the child delimiter
 				$cb_args = array_merge( array(&$output, $depth), $args);
 				call_user_func_array(array(&$this, 'end_lvl'), $cb_args);
 			}
-	
+
 			//end this element
 			$cb_args = array_merge( array(&$output, $element, $depth), $args);
 			call_user_func_array(array(&$this, 'end_el'), $cb_args);
 		}
 	}
-	
+
 	/**
 	 * END Class Name: twitter_bootstrap_nav_walker
 	 */
@@ -327,7 +327,7 @@ function boilerstrap_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Mobile-only Sidebar', 'boilerstrap' ),
 		'id' => 'sidebar-mobile',
@@ -367,7 +367,7 @@ function boilerstrap_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-	
+
 }
 add_action( 'widgets_init', 'boilerstrap_widgets_init' );
 
@@ -610,7 +610,7 @@ add_filter('single_template', create_function(
      $url = home_url( '/' );
      return $url;
   }
-  
+
   add_filter( 'login_headertitle', 'boilerstrap_login_headertitle' );
   /**
   * Replaces the login header logo title
@@ -621,7 +621,7 @@ add_filter('single_template', create_function(
      $title = get_bloginfo( 'name' );
      return $title;
   }
-  
+
   add_action( 'login_head', 'boilerstrap_login_style' );
   /**
   * Replaces the login header logo
@@ -633,7 +633,7 @@ add_filter('single_template', create_function(
      echo '  }'.PHP_EOL;
      echo '</style>'.PHP_EOL;
   }
-  
+
 /**
  * Add Custom Backend Favicon
  *
@@ -643,14 +643,14 @@ function boilerstrap_admin_favicon() {
 add_action('admin_head', 'boilerstrap_admin_favicon');
 
 */
- 
+
 /**
  * Only users that can update plugins see WordPress update notices
- */        
- 
+ */
+
 global $user_login;
 get_currentuserinfo();
-if (!current_user_can('update_plugins')) { // checks to see if current user can update plugins 
+if (!current_user_can('update_plugins')) { // checks to see if current user can update plugins
  add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
  add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
 }
@@ -658,7 +658,7 @@ if (!current_user_can('update_plugins')) { // checks to see if current user can 
 /**
  * Sharpen resized JPG's so they don't get blurry
  */
- 
+
 function boilerstrap_sharpen_resized_files( $resized_file ) {
 
    $image = wp_load_image( $resized_file );
@@ -679,7 +679,7 @@ function boilerstrap_sharpen_resized_files( $resized_file ) {
            );
 
            $divisor = array_sum(array_map('array_sum', $matrix));
-           $offset = 0; 
+           $offset = 0;
            imageconvolution($image, $matrix, $divisor, $offset);
            imagejpeg($image, $resized_file,apply_filters( 'jpeg_quality', 90, 'edit_image' ));
            break;
@@ -690,7 +690,7 @@ function boilerstrap_sharpen_resized_files( $resized_file ) {
    }
 
    return $resized_file;
-}   
+}
 
 add_filter('image_make_intermediate_size', 'boilerstrap_sharpen_resized_files',900);
 
@@ -703,7 +703,7 @@ remove_action('wp_head', 'wp_generator');
 /**
  * Custom User Profile Fields
  */
- 
+
 add_action( 'show_user_profile', 'boilerstrap_show_extra_profile_fields' );
 add_action( 'edit_user_profile', 'boilerstrap_show_extra_profile_fields' );
 
@@ -730,64 +730,64 @@ function boilerstrap_show_extra_profile_fields( $user ) { ?>
 				<span class="description">Add your job title</span>
 			</td>
 		</tr>
-		
+
     <tr>
     	<th><label for="location">Location</label></th>
-    
+
     	<td>
     		<input type="text" name="location" id="location" value="<?php echo esc_attr( get_the_author_meta( 'location', $user->ID ) ); ?>" class="regular-text" /><br />
     		<span class="description">Enter your location</span>
     	</td>
     </tr>
-    
+
     <tr>
     	<th><label for="twitter">Twitter Username</label></th>
-    
+
     	<td>
     		<input type="text" name="twitter" id="twitter" value="<?php echo esc_attr( get_the_author_meta( 'twitter', $user->ID ) ); ?>" class="regular-text" /><br />
     		<span class="description">Enter your twitter username, i.e. <span style="color: #999;">http://twitter.com/<span><span style="color: #37a42c; margin-left: 2px;">username</span></span>
     	</td>
     </tr>
-    
+
     <tr>
     	<th><label for="facebook">Facebook Account</label></th>
-    
+
     	<td>
     		<input type="text" name="facebook" id="facebook" value="<?php echo esc_attr( get_the_author_meta( 'facebook', $user->ID ) ); ?>" class="regular-text" /><br />
     		<span class="description">Enter the link to your Facebook profile, i.e. <span style="color: #37a42c;">http://facebook.com/username</span></span>
     	</td>
     </tr>
-    
+
     <tr>
     	<th><label for="googleplus">Google+</label></th>
-    
+
     	<td>
     		<input type="text" name="googleplus" id="googleplus" value="<?php echo esc_attr( get_the_author_meta( 'googleplus', $user->ID ) ); ?>" class="regular-text" /><br />
     		<span class="description">Enter the link to your Google+ profile, i.e. <span style="color: #37a42c;">https://plus.google.com/u/0/115446181846707482550</span></span>
     	</td>
     </tr>
-    
+
     <tr>
     	<th><label for="skype">Skype Username</label></th>
-    
+
     	<td>
     		<input type="text" name="skype" id="skype" value="<?php echo esc_attr( get_the_author_meta( 'skype', $user->ID ) ); ?>" class="regular-text" /><br />
     		<span class="description">Enter your Skype username</span>
     	</td>
     </tr>
-    
+
     <tr>
     	<th><label for="linkedin">LinkedIN Profile</label></th>
-    
+
     	<td>
     		<input type="text" name="linkedin" id="linkedin" value="<?php echo esc_attr( get_the_author_meta( 'linkedin', $user->ID ) ); ?>" class="regular-text" /><br />
     		<span class="description">Enter the link to your LinkedIN profile, i.e. <span style="color: #37a42c;">http://www.linkedin.com/in/tomhodgins</span></span>
     	</td>
     </tr>
-    
+
     <tr>
     	<th><label for="youtube">YouTube Channel</label></th>
-    
+
     	<td>
     		<input type="text" name="youtube" id="youtube" value="<?php echo esc_attr( get_the_author_meta( 'youtube', $user->ID ) ); ?>" class="regular-text" /><br />
     		<span class="description">Enter the link to your YouTube channel, i.e. <span style="color:  #37a42c;">http://www.youtube.com/user/howtobasic</span></span>
@@ -815,12 +815,12 @@ function boilerstrap_save_extra_profile_fields( $user_id ) {
   update_usermeta( $user_id, 'skype', $_POST['skype'] );
   update_usermeta( $user_id, 'linkedin', $_POST['linkedin'] );
   update_usermeta( $user_id, 'youtube', $_POST['youtube'] );
-	
+
 }
 
 // Remove Contact Methods
 function boilerstrap_remove_contactmethods( $contactmethods ) {
-  
+
 	unset($contactmethods['aim']);
 	unset($contactmethods['yim']);
 	unset($contactmethods['jabber']);
@@ -832,7 +832,7 @@ add_filter('user_contactmethods','boilerstrap_remove_contactmethods',10,1);
 /**
  * Adds current author widget only on single pages
  *
- 
+
  <div class="author-info">
  	<div class="author-avatar">
  		<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'boilerstrap_author_bio_avatar_size', 68 ) ); ?>
@@ -847,7 +847,7 @@ add_filter('user_contactmethods','boilerstrap_remove_contactmethods',10,1);
  		</div><!-- .author-link	-->
  	</div><!-- .author-description -->
  </div><!-- .author-info -->
- 
+
 */
 
 /**
@@ -859,3 +859,51 @@ add_filter('user_contactmethods','boilerstrap_remove_contactmethods',10,1);
      echo '<link rel="stylesheet" type="text/css" href="' . $url . '" />';
  }
  add_action('admin_head', 'boilerstrap_customAdmin');
+
+
+
+ /*Ajout page administration génral acf*/
+
+ if( function_exists('acf_add_options_page') ) {
+	// Page principale
+	acf_add_options_page(array(
+		'page_title'    => 'Options',
+		'menu_title'    => 'Options',
+		'menu_slug'     => 'options-generales',
+		'capability'    => 'edit_posts',
+		'redirect'      => true
+	));
+
+  // Première sous-page
+	acf_add_options_sub_page(array(
+		'page_title'    => 'Options d\'Entête',
+		'menu_title'    => 'Entête',
+		'parent_slug'   => 'options-generales',
+	));
+  // Deuxième sous-page
+	acf_add_options_sub_page(array(
+		'page_title'    => 'Options de Pied de Page',
+		'menu_title'    => 'Pied de page',
+		'parent_slug'   => 'options-generales',
+	));
+	// Troisieme page
+	acf_add_options_sub_page(array(
+		'page_title'    => 'Options site',
+		'menu_title'    => 'Option site',
+		'parent_slug'   => 'options-generales',
+	));
+
+
+}
+
+ if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title'    => 'Partenaires',
+		'menu_title'    => 'Partenaires',
+		'menu_slug'     => 'partenaires',
+		'capability'    => 'edit_posts',
+		'redirect'      => true
+	));
+
+
+}

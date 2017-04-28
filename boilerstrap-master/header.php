@@ -146,7 +146,7 @@
 
           <div class="contenu-logo">
             <a href="<?php bloginfo('url'); ?>" title="spécialiste climatisation paca">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="img-logo" alt="logo-climatisation"><br>
+              <img src="<?php the_field('logo' , 'option') ?>" class="img-logo" alt="logo-climatisation"><br>
               <img src="<?php echo get_template_directory_uri(); ?>/img/accroche.png" class="img-accroche" alt="logo-climatisation">
             </a>
           </div>
@@ -169,3 +169,13 @@
 
   	<div id="main-content" class="">
   <div class="row-fluid">
+
+
+     <div id="image-principale" style="background : url('<?php the_field('fond_en_tete' , 'option') ?>')">
+<div id="anim_1_Head" class="accrocheHead">
+<?php the_field('accroche' , 'option') ?>
+</div>
+<div id="anim_2_Head" class="accrocheHead">
+<?php the_field('accroche_2' , 'option') ?>
+</div>
+     </div>

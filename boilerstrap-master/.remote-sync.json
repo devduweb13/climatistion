@@ -1,0 +1,15 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "ftp.cluster021.hosting.ovh.net",
+  "target": "www/wp-content/themes/boilerstrap-master/",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "pacenergbq",
+  "password": "bCRRMnJRDqAr",
+  "watch": []
+}

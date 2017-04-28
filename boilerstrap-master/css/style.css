@@ -640,8 +640,36 @@ body ul {
 
 
 #image-principale {
-    background: url('../img/arriere-plan.png') no-repeat center fixed;
+
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
   min-height: 680px;
+  max-height: 680px;
+  float: left;
+  overflow: hidden;
+}
+
+
+.accrocheHead {
+  background: #fff;
+  padding: 7px 45px;
+  text-align: center;
+  font-size: 25px;
+  font-family: cursive;
+  text-align: center;
+  float: left;
+  text-transform: uppercase;
+  color: #ccc;
+  border: 1px #000 solid;
+  border-radius: 3px;
+
+}
+
+#anim_1_Head {
+  width:40%;
+margin: 280px 30% 0px;
+}
+#anim_2_Head {
+  width:50%;
+margin: 15px 25%;
 }
